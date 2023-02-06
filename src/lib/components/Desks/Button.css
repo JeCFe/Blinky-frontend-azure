@@ -1,0 +1,49 @@
+.desk {
+  transform: scale(0.8);
+  font-size: 16px;
+  font-weight: 200;
+  width: 200px;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  font-family: "Homer Simpson Revised", sans-serif;
+}
+
+.desk::after {
+  content: "";
+  background-color: var(--simson-yellow-color);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.desk:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.bookedDesk {
+  transform: scale(0.8);
+  width: 200px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  border: 1px solid black;
+  background-color: rgb(173, 63, 63);
+}
+
+@media (min-width: 768px) {
+  .desk .bookedDesk {
+    padding: 13px 50px 13px;
+  }
+}

@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: "Homer Simpson Revised", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fcefa7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.cdnfonts.com/css/homer-simpson-revised");
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.container {
+  width: 90%;
+  text-align: center;
+  word-wrap: break-word;
+}
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.react-draggable {
+  width: 100px;
+}
+.react-draggable-dragged {
+  width: 100px;
+}
+
+.button-btn {
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48, 172, 251);
+  color: white;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Homer Simpson Revised", sans-serif;
+}
+
+.button-btn:hover {
+  transform: scale(1.03);
+  letter-spacing: 4px;
+  background-color: #7fffd4;
+  color: #1e90ff;
+}
+
+.button-btn-org {
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(156, 45, 184);
+  color: white;
+  margin-top: 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15pt;
+  font-weight: 700;
+  transition: 1s;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Homer Simpson Revised", sans-serif;
+  max-width: 8em;
+}
+
+.button-btn-org:hover {
+  transform: scale(1.03);
+  letter-spacing: 4px;
+  background-color: #98af61;
+  color: rgb(156, 45, 184);
+}
+
+:root {
+  --simson-yellow-color: #ffe54c;
+}
