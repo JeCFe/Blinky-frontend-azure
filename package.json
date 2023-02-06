@@ -44,5 +44,8 @@
     "@types/react": "^18.0.27",
     "openapi-typescript": "^6.1.0",
     "openapi-typescript-codegen": "^0.23.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
