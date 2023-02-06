@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: node-app
-        path: .
+        path: build
     
 
   deploy:
@@ -54,6 +54,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
+            ls
             az storage blob upload-batch --account-name blinkystorage --auth-mode key -d '$web' -s .
    # - name: Purge CDN endpoint
     #  uses: azure/CLI@v1
