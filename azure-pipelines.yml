@@ -35,5 +35,5 @@ steps:
     app_location: '/build'
     skip_app_build: true
     skip_api_build: true
-    env:
-      azure_static_web_apps_api_token: $(STATIC_SITE_API_KEY)
+  env:
+    azure_static_web_apps_api_token: $(STATIC_SITE_API_KEY)
