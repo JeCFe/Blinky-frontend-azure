@@ -12,18 +12,25 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x'
+    versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: AzureCLI@2
+  displayName: Export Azure App Configuration
+  inputs:
+    azureSubscription: 'Azure subscription 1(1edd74a9-ae39-4490-bcd1-f633c82507a3)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az appconfig kv export --name blinky --label website --destination file --path src/config.json --format json --yes'
 - script: |
     npm install
     npm run build
   displayName: 'npm install and build'
 
-- task: AzureRmWebAppDeployment@4
+- task: AzureStaticWebApp@0
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription 1(1edd74a9-ae39-4490-bcd1-f633c82507a3)'
-    appType: 'webAppLinux'
-    WebAppName: 'blinkywebapp1'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    app_location: '/build'
+    skip_app_build: true
+    skip_api_build: true
+    env:
+      azure_static_web_apps_api_token: $(STATIC_SITE_API_KEY)
