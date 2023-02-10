@@ -17,18 +17,6 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-- task: npmAuthenticate@0
-  displayName: Configure npm authentication
-  inputs:
-    workingFile: .npmrc
-
-- task: AzureCLI@2
-  displayName: Export Azure App Configuration
-  inputs:
-    azureSubscription: 'Azure subscription 1(1edd74a9-ae39-4490-bcd1-f633c82507a3)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az appconfig kv export --name blinky --label website --destination file --path src/config.json --format json --yes'
 - script: |
     npm install
     npm run build
