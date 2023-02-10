@@ -17,6 +17,10 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+- task: npmAuthenticate@0
+  displayName: Configure npm authentication
+  inputs:
+    workingFile: .npmrc
 
 - task: AzureCLI@2
   displayName: Export Azure App Configuration
