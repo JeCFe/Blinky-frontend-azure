@@ -9,9 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  - group: Blinky Website Variables
-
 steps:
 - task: NodeTool@0
   inputs:
